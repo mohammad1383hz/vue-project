@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorld from '../components/HelloWorld.vue'
 import Users from '../components/Users.vue'
 import UserShowIndex from '../components/UserShowIndex.vue'
+import PostCreate from '../components/PostCreate.vue'
+import PostUpdate from '../components/PostUpdate.vue'
+
+
 
 
 
@@ -19,10 +23,16 @@ const router = createRouter({
       component: UserShowIndex
     },
     {
-      path: '/post',
-      name: 'home',
-      component: HelloWorld
+      path: '/posts',
+      name: 'post.create',
+      component: PostCreate
     },
+    {
+      path: '/post/edit/:id',
+      name: 'post.update',
+      component: PostUpdate
+    },
+  
     // {
     //   path: '/about',
     //   name: 'about',
